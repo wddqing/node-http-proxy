@@ -1,22 +1,41 @@
 {
   "name": "node-http-proxy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a http(s) proxy server could use yet",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
   },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "directories": {
+    "bin": "./bin",
+    "lib": "./lib",
+    "test":"./test"
+  },
+  "bin": {
+    "nproxy": "./bin/node-http-proxy"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/wddqing/node-http-proxy.git"
   },
+  "dependencies":{
+    "pm":"*",
+    "pm2":"*",
+    "async":"*",
+    "bufferhelper":"*",
+    "request":"*",
+    "commander":"*"
+  },
   "devDependencies": {
     "pm":"*",
+    "pm2":"*",
     "async":"*",
-    "optimist":"*",
-    "daemon":"*",
     "bufferhelper":"*",
-    "request":"*"
+    "request":"*",
+    "commander":"*"
   },
   "author": "wddqing",
   "license": "ISC",

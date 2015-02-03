@@ -1,0 +1,54 @@
+#!/usr/bin/env node
+
+'use strict'
+
+var program = require('commander')
+var pm2     = require('pm2')
+
+program.on('--help',function(){
+    console.log("  ================Basic Example===============")
+    console.log('')
+    console.log('  Command: nproxy -p 8888 -i 1')
+    console.log('')
+})
+
+
+var commanders = {
+    instance:{params:'-i --instance [i]',comment:'child process,0 means use max cpu cores'},
+    port:{params:'-p --port [p]',comment:'listen port'},
+    debug:{params:'-d --debug',comment:'open debug mode'},
+    daemon:{params:'-D --daemon',comment:'run proxy server daemon'}
+}
+
+var argvs = {};
+
+
+//set version
+program.version('0.0.1')
+
+//register params
+for(var c in commanders){
+    program.option(commanders[c]['params'],commanders[c]['comment'])
+}
+
+//parse argv
+program.parse(process.argv)
+
+//init argvs
+for(var c in commanders){
+    if(program[c] != undefined){
+        argvs[c] = program[c]
+    }
+}
+
+if(argvs.debug != undefined){
+    console.log(' ====== argvs',argvs);
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,110 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/wddqing/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/Users/wddqing/.npm/node-http-proxy/0.0.2/package.tgz', '.' ]
+11 verbose tarball /Users/wddqing/.npm/node-http-proxy/0.0.2/package.tgz
+12 verbose folder .
+13 info prepublish node-http-proxy@0.0.2
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/wddqing/.npm/1f1177db-tar.lock
+16 silly lockFile a08a2190-ode-http-proxy-0-0-2-package-tgz tar:///Users/wddqing/.npm/node-http-proxy/0.0.2/package.tgz
+17 verbose lock tar:///Users/wddqing/.npm/node-http-proxy/0.0.2/package.tgz /Users/wddqing/.npm/a08a2190-ode-http-proxy-0-0-2-package-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile a08a2190-ode-http-proxy-0-0-2-package-tgz tar:///Users/wddqing/.npm/node-http-proxy/0.0.2/package.tgz
+21 silly lockFile a08a2190-ode-http-proxy-0-0-2-package-tgz tar:///Users/wddqing/.npm/node-http-proxy/0.0.2/package.tgz
+22 silly lockFile 35aba506-pm-node-http-proxy-0-0-2-package /Users/wddqing/.npm/node-http-proxy/0.0.2/package
+23 verbose lock /Users/wddqing/.npm/node-http-proxy/0.0.2/package /Users/wddqing/.npm/35aba506-pm-node-http-proxy-0-0-2-package.lock
+24 silly lockFile 35aba506-pm-node-http-proxy-0-0-2-package /Users/wddqing/.npm/node-http-proxy/0.0.2/package
+25 silly lockFile 35aba506-pm-node-http-proxy-0-0-2-package /Users/wddqing/.npm/node-http-proxy/0.0.2/package
+26 silly lockFile 3a52ce78- .
+27 silly lockFile 3a52ce78- .
+28 silly publish { name: 'node-http-proxy',
+28 silly publish   version: '0.0.2',
+28 silly publish   description: 'a http(s) proxy server could use yet',
+28 silly publish   main: 'index.js',
+28 silly publish   scripts: { test: 'node test.js' },
+28 silly publish   repository:
+28 silly publish    { type: 'git',
+28 silly publish      url: 'https://github.com/wddqing/node-http-proxy.git' },
+28 silly publish   devDependencies:
+28 silly publish    { pm: '*',
+28 silly publish      async: '*',
+28 silly publish      optimist: '*',
+28 silly publish      daemon: '*',
+28 silly publish      bufferhelper: '*',
+28 silly publish      request: '*' },
+28 silly publish   author: { name: 'wddqing' },
+28 silly publish   license: 'ISC',
+28 silly publish   bugs: { url: 'https://github.com/wddqing/node-http-proxy/issues' },
+28 silly publish   homepage: 'https://github.com/wddqing/node-http-proxy',
+28 silly publish   readme: 'node-http-proxy\n===============\n\na node http proxy server\n',
+28 silly publish   readmeFilename: 'README.md',
+28 silly publish   gitHead: '29c69c6e3b1965dc68f9b4071e90c3f714c8a89f',
+28 silly publish   _id: 'node-http-proxy@0.0.2',
+28 silly publish   _shasum: '48a67fc7c76757dfc6fe95d2cf2e466eebe430a9',
+28 silly publish   _from: '.' }
+29 verbose request where is /node-http-proxy
+30 verbose request registry https://registry.npmjs.org/
+31 verbose request id 1f238a71522b1a55
+32 verbose url raw /node-http-proxy
+33 verbose url resolving [ 'https://registry.npmjs.org/', './node-http-proxy' ]
+34 verbose url resolved https://registry.npmjs.org/node-http-proxy
+35 verbose request where is https://registry.npmjs.org/node-http-proxy
+36 info trying registry request attempt 1 at 00:16:54
+37 http PUT https://registry.npmjs.org/node-http-proxy
+38 http 403 https://registry.npmjs.org/node-http-proxy
+39 verbose headers { date: 'Wed, 28 Jan 2015 16:16:54 GMT',
+39 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+39 verbose headers   'content-type': 'application/json',
+39 verbose headers   'cache-control': 'max-age=60',
+39 verbose headers   'content-length': '2206',
+39 verbose headers   'accept-ranges': 'bytes',
+39 verbose headers   via: '1.1 varnish',
+39 verbose headers   'x-served-by': 'cache-ty66-TYO',
+39 verbose headers   'x-cache': 'MISS',
+39 verbose headers   'x-cache-hits': '0',
+39 verbose headers   'x-timer': 'S1422461814.831476,VS0,VE131',
+39 verbose headers   'keep-alive': 'timeout=10, max=50',
+39 verbose headers   connection: 'Keep-Alive' }
+40 error publish Failed PUT 403
+41 error Error: forbidden cannot modify pre-existing version: 0.0.2
+41 error old={"name":"node-http-proxy","version":"0.0.2","description":"a http(s) proxy server could use yet","main":"index.js","scripts":{"test":"node test.js"},"repository":{"type":"git","url":"https://github.com/wddqing/node-http-proxy.git"},"author":{"name":"wddqing"},"license":"ISC","bugs":{"url":"https://github.com/wddqing/node-http-proxy/issues"},"homepage":"https://github.com/wddqing/node-http-proxy","gitHead":"35bfa8ebaf4f92e4d129c3481bc1917829784318","_id":"node-http-proxy@0.0.2","_shasum":"79d4409a03bf82dcb5794e38136188dc3217a936","_from":".","_npmVersion":"1.4.28","_npmUser":{"name":"wddqing","email":"wddqing@qq.com"},"maintainers":[{"name":"wddqing","email":"wddqing@qq.com"}],"dist":{"shasum":"79d4409a03bf82dcb5794e38136188dc3217a936","tarball":"http://registry.npmjs.org/node-http-proxy/-/node-http-proxy-0.0.2.tgz"}}
+41 error new={"name":"node-http-proxy","version":"0.0.2","description":"a http(s) proxy server could use yet","main":"index.js","scripts":{"test":"node test.js"},"repository":{"type":"git","url":"https://github.com/wddqing/node-http-proxy.git"},"devDependencies":{"pm":"*","async":"*","optimist":"*","daemon":"*","bufferhelper":"*","request":"*"},"author":{"name":"wddqing"},"license":"ISC","bugs":{"url":"https://github.com/wddqing/node-http-proxy/issues"},"homepage":"https://github.com/wddqing/node-http-proxy","readme":"node-http-proxy\u000a===============\u000a\u000aa node http proxy server\u000a","readmeFilename":"README.md","gitHead":"29c69c6e3b1965dc68f9b4071e90c3f714c8a89f","_id":"node-http-proxy@0.0.2","_shasum":"48a67fc7c76757dfc6fe95d2cf2e466eebe430a9","_from":".","_npmVersion":"1.4.28","_npmUser":{"name":"wddqing","email":"wddqing@qq.com"},"maintainers":[{"name":"wddqing","email":"wddqing@qq.com"}],"dist":{"shasum":"48a67fc7c76757dfc6fe95d2cf2e466eebe430a9","tarball":"http://registry.npmjs.org/node-http-proxy/-/node-http-proxy-0.0.2.tgz"}}: node-http-proxy
+41 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:308:14)
+41 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:246:65)
+41 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:236:22)
+41 error     at Request.emit (events.js:98:17)
+41 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1142:14)
+41 error     at Request.emit (events.js:117:20)
+41 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1096:12)
+41 error     at IncomingMessage.emit (events.js:117:20)
+41 error     at _stream_readable.js:944:16
+41 error     at process._tickCallback (node.js:442:13)
+42 error If you need help, you may report this *entire* log,
+42 error including the npm and node versions, at:
+42 error     <http://github.com/npm/npm/issues>
+43 error System Darwin 14.0.0
+44 error command "node" "/usr/local/bin/npm" "publish"
+45 error cwd /Users/wddqing/workspace/nodejs/node-http-proxy
+46 error node -v v0.10.35
+47 error npm -v 1.4.28
+48 verbose exit [ 1, true ]
