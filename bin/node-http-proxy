@@ -24,20 +24,20 @@ var argvs = {};
 
 
 //set version
-program.version('0.0.1')
+program.version('0.0.1');
 
 //register params
 for(var c in commanders){
-    program.option(commanders[c]['params'],commanders[c]['comment'])
+    program.option(commanders[c]['params'],commanders[c]['comment']);
 }
 
 //parse argv
-program.parse(process.argv)
+program.parse(process.argv);
 
 //init argvs
 for(var c in commanders){
     if(program[c] != undefined){
-        argvs[c] = program[c]
+        argvs[c] = program[c];
     }
 }
 
@@ -46,6 +46,15 @@ if(argvs.debug != undefined){
 }
 
 
+
+pm2.connect(function(){
+    pm2.start(__dirname + '/main.js',{name:'http-proxy',args:['--a']},function(err,proc){
+        if(err && argvs.debug) console.trace(err);
+        pm2.disconnect(function(){
+           process.exit(0);
+        });
+    });
+})
 
 
 
