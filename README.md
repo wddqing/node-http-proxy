@@ -1,9 +1,22 @@
 node-http-proxy
 ===============
 
-a node http proxy server
+a node http(s) proxy server
 
-something need to do
+## Install node-http-proxy
 
-1.parse command parameters from pm2 to node 
-2.finished nproxy command
+```bash
+$npm install -g node-http-proxy
+```
+
+## Usage
+
+```bash
+$nproxy -p 9999 -i 1
+```
+
+	
+## Something need to do
+
+1.finished nproxy command
+2.support other http method
