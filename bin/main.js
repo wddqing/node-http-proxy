@@ -4,10 +4,22 @@
  */
 
 console.log(process.argv);
+var commander = require('commander');
+commander.option('-p --port [i]')
+		.option('-i --instance [i]')
+		.parse(process.argv);
+var argv = {};
+
+['instance','port'].forEach(function(k){
+	if(commander[k] != undefined){
+		argv[k] = commander[k];
+	}
+});
+console.log(argv);
 
 var ProxyMaster = require('../lib/proxy-master')
 
-var proxymaster = new ProxyMaster()
+var proxymaster = new ProxyMaster(argv)
 
 proxymaster.start();
 

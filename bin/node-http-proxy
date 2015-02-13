@@ -14,13 +14,14 @@ program.on('--help',function(){
 
 
 var commanders = {
-    instance:{params:'-i --instance [i]',comment:'child process,0 means use max cpu cores'},
-    port:{params:'-p --port [p]',comment:'listen port'},
+instance:{params:'-i --instance [i]',comment:'child process,0 means use max cpu cores',sn:'-i'},
+    port:{params:'-p --port [p]',comment:'listen port',sn:'-p'},
     debug:{params:'-d --debug',comment:'open debug mode'},
     daemon:{params:'-D --daemon',comment:'run proxy server daemon'}
 }
 
-var argvs = {};
+
+var argvs = [];
 
 
 //set version
@@ -36,10 +37,13 @@ program.parse(process.argv);
 
 //init argvs
 for(var c in commanders){
-    if(program[c] != undefined){
-        argvs[c] = program[c];
+    if(program[c] != undefined && commanders[c]['sn'] != undefined){
+		argvs.push(commanders[c]['sn']);	
+		argvs.push(program[c]);
     }
+
 }
+
 
 if(argvs.debug != undefined){
     console.log(' ====== argvs',argvs);
@@ -48,7 +52,7 @@ if(argvs.debug != undefined){
 
 
 pm2.connect(function(){
-    pm2.start(__dirname + '/main.js',{name:'http-proxy',scriptArgs:['--a']},function(err,proc){
+    pm2.start(__dirname + '/main.js',{name:'http-proxy',scriptArgs:argvs},function(err,proc){
         if(err && argvs.debug) console.trace(err);
         pm2.disconnect(function(){
            process.exit(0);
