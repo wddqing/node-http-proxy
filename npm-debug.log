@@ -1,0 +1,84 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'adduser' ]
+2 info using npm@2.5.0
+3 info using node@v0.10.26
+4 verbose adduser before first PUT { _id: 'org.couchdb.user:wddqing',
+4 verbose adduser   name: 'wddqing',
+4 verbose adduser   password: 'XXXXX',
+4 verbose adduser   email: 'wddqing@gmail.com',
+4 verbose adduser   type: 'user',
+4 verbose adduser   roles: [],
+4 verbose adduser   date: '2015-02-13T10:05:11.838Z' }
+5 verbose request uri http://registry.npm.taobao.org/-/user/org.couchdb.user:wddqing
+6 verbose request new user, so can't send auth
+7 info attempt registry request try #1 at 02:05:11
+8 verbose request id 862ce0c62baa850e
+9 http request PUT http://registry.npm.taobao.org/-/user/org.couchdb.user:wddqing
+10 http 409 http://registry.npm.taobao.org/-/user/org.couchdb.user:wddqing
+11 verbose headers { server: 'nginx/1.1.19',
+11 verbose headers   date: 'Fri, 13 Feb 2015 10:05:06 GMT',
+11 verbose headers   'content-type': 'application/json; charset=utf-8',
+11 verbose headers   'content-length': '60',
+11 verbose headers   connection: 'keep-alive',
+11 verbose headers   'x-powered-by': 'koa',
+11 verbose headers   'access-control-allow-origin': '*',
+11 verbose headers   'access-control-allow-methods': 'GET,HEAD',
+11 verbose headers   'x-readtime': '8' }
+12 verbose request invalidating /home/wddqing/.npm/registry.npm.taobao.org/-/user/org.couchdb.user_3Awddqing on PUT
+13 verbose adduser update existing user
+14 verbose request uri http://registry.npm.taobao.org/-/user/org.couchdb.user:wddqing?write=true
+15 verbose request sending authorization for write operation
+16 info attempt registry request try #1 at 02:05:12
+17 http request GET http://registry.npm.taobao.org/-/user/org.couchdb.user:wddqing?write=true
+18 http 200 http://registry.npm.taobao.org/-/user/org.couchdb.user:wddqing?write=true
+19 verbose adduser userobj { _id: 'org.couchdb.user:wddqing',
+19 verbose adduser   name: 'wddqing',
+19 verbose adduser   password: 'XXXXX',
+19 verbose adduser   email: 'wddqing@gmail.com',
+19 verbose adduser   type: 'user',
+19 verbose adduser   roles: [],
+19 verbose adduser   date: '2015-02-13T10:05:11.838Z' }
+20 verbose request uri http://registry.npm.taobao.org/-/user/org.couchdb.user:wddqing/-rev/2-d9820152d005104f271e482242afd5c5
+21 verbose request updating existing user; sending authorization
+22 info attempt registry request try #1 at 02:05:12
+23 http request PUT http://registry.npm.taobao.org/-/user/org.couchdb.user:wddqing/-rev/2-d9820152d005104f271e482242afd5c5
+24 http 401 http://registry.npm.taobao.org/-/user/org.couchdb.user:wddqing/-rev/2-d9820152d005104f271e482242afd5c5
+25 verbose headers { server: 'nginx/1.1.19',
+25 verbose headers   date: 'Fri, 13 Feb 2015 10:05:06 GMT',
+25 verbose headers   'content-type': 'application/json; charset=utf-8',
+25 verbose headers   'content-length': '47',
+25 verbose headers   connection: 'keep-alive',
+25 verbose headers   'x-powered-by': 'koa',
+25 verbose headers   'access-control-allow-origin': '*',
+25 verbose headers   'access-control-allow-methods': 'GET,HEAD',
+25 verbose headers   'x-readtime': '6' }
+26 verbose request invalidating /home/wddqing/.npm/registry.npm.taobao.org/-/user/org.couchdb.user_3Awddqing on PUT
+27 verbose adduser back [ { [Error: unauthorized Login first: -/user/org.couchdb.user:wddqing/-rev/2-d9820152d005104f271e482242afd5c5] statusCode: 401, code: 'E401' },
+27 verbose adduser   { error: 'unauthorized', reason: 'Login first' },
+27 verbose adduser   '{"error":"unauthorized","reason":"Login first"}' ]
+28 warn adduser Incorrect username or password
+28 warn adduser You can reset your account by visiting:
+28 warn adduser
+28 warn adduser     https://npmjs.org/forgot
+29 verbose stack Error: unauthorized Login first: -/user/org.couchdb.user:wddqing/-rev/2-d9820152d005104f271e482242afd5c5
+29 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:254:14)
+29 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:178:14)
+29 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:373:22)
+29 verbose stack     at Request.EventEmitter.emit (events.js:98:17)
+29 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1318:14)
+29 verbose stack     at Request.EventEmitter.emit (events.js:117:20)
+29 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1266:12)
+29 verbose stack     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+29 verbose stack     at _stream_readable.js:920:16
+29 verbose stack     at process._tickCallback (node.js:415:13)
+30 verbose statusCode 401
+31 verbose cwd /home/wddqing/workspace/node/node-http-proxy
+32 error Linux 3.13.0-43-generic
+33 error argv "node" "/usr/local/bin/npm" "adduser"
+34 error node v0.10.26
+35 error npm  v2.5.0
+36 error code E401
+37 error unauthorized Login first: -/user/org.couchdb.user:wddqing/-rev/2-d9820152d005104f271e482242afd5c5
+38 error If you need help, you may report this error at:
+38 error     <http://github.com/npm/npm/issues>
+39 verbose exit [ 1, true ]

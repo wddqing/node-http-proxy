@@ -23,7 +23,7 @@
   },
   "dependencies":{
     "pm":"*",
-    "pm2":"*",
+    "pm2":"0.12.5",
     "async":"*",
     "bufferhelper":"*",
     "request":"*",
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "pm":"*",
-    "pm2":"*",
+    "pm2":"0.12.5",
     "async":"*",
     "bufferhelper":"*",
     "request":"*",
