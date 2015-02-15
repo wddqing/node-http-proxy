@@ -13,17 +13,22 @@ var SERVER_ENV = common.SERVER_ENV;
 program.on('--help',function(){
     console.log("  ================Basic Example===============")
     console.log('')
-    console.log('server start')
-    console.log('nproxy start -p 8888 -i 1')
+    console.log('  SERVER START')
+    console.log('  nproxy start -p 8888 -i 1')
     console.log('')
-    console.log('server stop')
-    console.log('nproxy stop')
+    console.log('  SERVER STOP')
+    console.log('  nproxy stop')
+    console.log('')
+    console.log('  SERVER RESTART')
+    console.log('  nproxy restart')
+    console.log('')
+    console.log('  view more detail at http://github.com/wddqing/node-http-proxy')
     console.log('')
 })
 
 
 //set version
-program.version('0.1.1')
+program.version('0.1.4')
 
 //program command
 program.command('start')
