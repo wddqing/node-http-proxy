@@ -25,12 +25,14 @@
     "pm":"*",
     "pm2":"0.12.5",
     "bufferhelper":"*",
+    "async":"*",
     "request":"*",
     "commander":"*"
   },
   "devDependencies": {
     "pm":"*",
     "pm2":"0.12.5",
+    "async":"*",
     "bufferhelper":"*",
     "request":"*",
     "commander":"*"
