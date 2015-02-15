@@ -80,7 +80,7 @@ program.command('restart')
     .description('restart server')
     .action(function(cmd){
         pm2.connect(function(){
-            pm2.restart(SERVER_ENV.NAME,function(err,proc){
+            pm2.stop(SERVER_ENV.NAME,function(err,proc){
                 if(err)console.trace(err)
                 pm2.disconnect(function(err){
                     if(err && cmd.D)console.trace(err)
