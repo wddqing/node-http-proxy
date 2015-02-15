@@ -3,7 +3,7 @@
  * Created by wddqing on 15/2/3.
  */
 
-console.log(process.argv);
+//console.log(process.argv);
 var commander = require('commander');
 commander.option('-p --port [i]')
 		.option('-i --instance [i]')
@@ -15,7 +15,6 @@ var argv = {};
 		argv[k] = commander[k];
 	}
 });
-console.log(argv);
 
 var ProxyMaster = require('../lib/proxy-master')
 

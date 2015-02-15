@@ -24,7 +24,6 @@
   "dependencies":{
     "pm":"*",
     "pm2":"0.12.5",
-    "async":"*",
     "bufferhelper":"*",
     "request":"*",
     "commander":"*"
@@ -32,7 +31,6 @@
   "devDependencies": {
     "pm":"*",
     "pm2":"0.12.5",
-    "async":"*",
     "bufferhelper":"*",
     "request":"*",
     "commander":"*"
