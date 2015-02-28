@@ -19,7 +19,6 @@ $nproxy start -p 9999 -i 1
 
 $nproxy stop #stop server
 
-$nproxy restart #restart server
 ```
 
 ## Useage

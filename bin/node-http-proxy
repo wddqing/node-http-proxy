@@ -23,9 +23,6 @@ program.on('--help',function(){
     console.log('  SERVER STOP');
     console.log('  $nproxy stop');
     console.log('');
-    console.log('  SERVER RESTART');
-    console.log('  $nproxy restart');
-    console.log('');
     console.log('  view more detail at http://github.com/wddqing/node-http-proxy');
     console.log('');
 });
