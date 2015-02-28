@@ -58,7 +58,7 @@ program.command('start')
             detached: true
         };
         try{
-            var argv = ['-p',cmd.port,'-i',cmd.instance,cmd.debug];
+            var argv = ['-p',cmd.port || 8845,'-i',cmd.instance || os.cpus().length ,cmd.debug];
             var child = cp.spawn(process.execPath,[__dirname+'/main.js'].concat(argv),cp_opt);
             console.log('start process nproxy',child.pid,'pid file',PID);
             fs.writeFileSync(PID,child.pid);

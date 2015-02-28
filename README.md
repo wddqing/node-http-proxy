@@ -21,6 +21,16 @@ $nproxy stop #stop server
 
 ```
 
+##use in code
+```javascript
+var ProxyMaster = require('node-http-proxy').proxyMaster;
+
+var proxymaster = new ProxyMaster({instance:1,port:8123});
+
+proxymaster.start();
+```
+
+
 ## Useage
 ```bash
 $curl -x 127.0.0.1:9999 http://www.google.com/
