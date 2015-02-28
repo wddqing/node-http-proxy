@@ -3,9 +3,7 @@
 'use strict';
 
 var program = require('commander');
-var pm2     = require('pm2');
 var os      = require('os');
-var async   = require('async');
 var cp      = require('child_process');
 var fs      = require('fs');
 
