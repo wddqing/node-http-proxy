@@ -21,7 +21,7 @@ $nproxy stop #stop server
 
 ```
 
-##use in code
+## Use in code
 ```javascript
 var ProxyMaster = require('node-http-proxy').proxyMaster;
 
