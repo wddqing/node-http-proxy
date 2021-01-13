@@ -1,6 +1,6 @@
 {
   "name": "node-http-proxy",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "a http(s) proxy server ",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "directories": {
     "bin": "./bin",
     "lib": "./lib",
-    "test":"./test"
+    "test": "./test"
   },
   "bin": {
     "nproxy": "./bin/node-http-proxy"
@@ -21,17 +21,17 @@
     "type": "git",
     "url": "https://github.com/wddqing/node-http-proxy.git"
   },
-  "dependencies":{
-    "pm":"2.2.5",
-    "bufferhelper":"0.2.0",
-    "request":"2.51.0",
-    "commander":"2.6.0"
+  "dependencies": {
+    "pm": "2.2.5",
+    "bufferhelper": "0.2.0",
+    "request": "2.51.0",
+    "commander": "2.6.0"
   },
   "devDependencies": {
-    "pm":"latest",
-    "bufferhelper":"latest",
-    "request":"latest",
-    "commander":"latest"
+    "pm": "latest",
+    "bufferhelper": "latest",
+    "request": "latest",
+    "commander": "latest"
   },
   "author": "wddqing",
   "license": "ISC",
@@ -39,13 +39,13 @@
     "url": "https://github.com/wddqing/node-http-proxy/issues"
   },
   "homepage": "https://github.com/wddqing/node-http-proxy",
-  "keywords":[
-      "node-http-proxy",
-      "http-proxy",
-      "proxy",
-      "bufferhelper",
-      "pm",
-      "request",
-      "commander"
+  "keywords": [
+    "node-http-proxy",
+    "http-proxy",
+    "proxy",
+    "bufferhelper",
+    "pm",
+    "request",
+    "commander"
   ]
 }
